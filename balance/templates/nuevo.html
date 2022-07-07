@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block head_title %}
-{{ super() }}: crear movimiento
+{{ super() }}: Crear nuevo movimiento
 {% endblock %}
 
 
@@ -12,7 +12,45 @@ Listado de movimientos
 
 {% block contenido %}
 {{super()}}
-<div class="panel">
-  <p>Hola, soy el formulario para crear un movimiento</p>
+<!-- 
+  CRUD: Create, Read, Update, Delete
+  GET
+  POST
+  PUT
+ -->
+<form action="/nuevo" method="post">
+  <!-- .campo-formulario -->
+<div class="campo-formulario">
+  <label for="fecha">Fecha</label>
+<input type="date" id = "fecha" name="fecha">
 </div>
+  <div class="campo-formulario">
+    <label for="hora">Hora</label>
+    <input type="time" id = "hora" name="hora">
+</div>
+
+<div class="campo-formulario">
+  <label for="concepto">Concepto</label>
+  <input type="text">
+</div>
+
+<div class="campo-formulario">
+  <input type="radio" name="ingreso-gasto" id="ingreso" value="I">
+  <label for="ingreso" class="radio-label">Ingreso</label>
+  <input type="radio" name="ingreso-gasto" id="gasto" value="G">
+  <label for="gasto" class="radio-label">Gasto</label>
+</div>
+
+<div class="campo-formulario">
+  <label for="cantidad">Cantidad</label>
+  <input type="number">
+</div>
+
+<div class="acciones">
+  <!-- <input type="submit" value="Agregar"> -->
+  <button type="submit" class="blue-button">Agregar</button>
+</div>
+
+</form>
+
 {% endblock %}
