@@ -31,19 +31,19 @@ Listado de movimientos
 
 <div class="campo-formulario">
   <label for="concepto">Concepto</label>
-  <input type="text">
+  <input type="text" name="concepto" required>
 </div>
 
 <div class="campo-formulario">
-  <input type="radio" name="ingreso-gasto" id="ingreso" value="I">
-  <label for="ingreso" class="radio-label">Ingreso</label>
-  <input type="radio" name="ingreso-gasto" id="gasto" value="G">
+  <input type="radio" name="tipo" id="ingreso" value="I" name="tipo">
+  <label for="ingreso" class="radio-label" >Ingreso</label>
+  <input type="radio" name="tipo" id="gasto" value="G">
   <label for="gasto" class="radio-label">Gasto</label>
 </div>
 
 <div class="campo-formulario">
   <label for="cantidad">Cantidad</label>
-  <input type="number">
+  <input type="number" name="cantidad" required>
 </div>
 
 <div class="acciones">
